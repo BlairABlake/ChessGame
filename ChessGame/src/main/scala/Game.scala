@@ -24,4 +24,10 @@ class Game(players: List[Player], board: Board, state: State) {
     case State.White => State.Black
     case State.Black => State.White
   }
+
+  override def toString: String = {
+    board.getBoard().foldLeft("")(
+      (s: String, row: Vector[Square]) => s + row.foldLeft("")((s: String, square: Square) => s+square.toString) + "\n"
+    )
+  }
 }

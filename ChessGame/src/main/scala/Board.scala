@@ -12,4 +12,6 @@ class Board(board: _Board) {
         )
       )
     )
+
+  def getBoard(): _Board = board
 }
