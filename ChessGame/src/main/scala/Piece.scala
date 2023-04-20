@@ -1,5 +1,5 @@
 enum Piece(val text: String):
-  case Empty extends Piece("")
+  case Empty extends Piece(" ")
   case Pawn extends Piece("♙")
   case Bishop extends Piece("♗")
   case Knight extends Piece("♘")

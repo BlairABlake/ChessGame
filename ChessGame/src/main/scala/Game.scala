@@ -8,8 +8,8 @@ class Game(players: List[Player], board: Board, state: State) {
     else new Game(
       players,
       board
-        .set(movement.prevPos, new Square(Piece.Empty, Gray))
-        .set(movement.nextPos, board.get(movement.prevPos)),
+        .set(movement.nextPos, board.get(movement.prevPos))
+        .set(movement.prevPos, new Square(Piece.Empty, Gray)),
       changeState(state)
     )
   }

@@ -4,6 +4,5 @@
     GameFactory.makeBasicBoard(),
     State.White
   )
-
-  println(game)
+  println(game.move(Move(Position.fromAlg("a2"), Position.fromAlg("a3")), new Player(Color.White)))
 }
